@@ -4,6 +4,7 @@ import {
   faHome,
   faCalculator,
   faTree,
+  faChartLine
 } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
@@ -26,12 +27,18 @@ function App() {
               <FontAwesomeIcon icon={faTree} />
             </Link>
           </li>
+          <li>
+            <Link to="/Statistics">
+              <FontAwesomeIcon icon={faChartLine} />
+            </Link>
+          </li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Calculator" element={<CalculatorPage />} />
         <Route path="/Forest" element={<ForestPage />} />
+        <Route path="/Statistics" element={<StatisticsPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -40,24 +40,44 @@
 nav {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  background-color: #f8f8f8;
-  border-top: 1px solid #ccc;
-  padding: 10px;
+  left: 0;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  right: 0;
 }
 
 nav ul {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  flex-grow: 1;
   justify-content: space-around;
-  width: 100%;
+  align-items: center;
 }
 
 nav li {
-  margin: 0;
-  padding: 0;
+  margin: 0 10px;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+nav svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
 }
