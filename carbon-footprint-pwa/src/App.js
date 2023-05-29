@@ -7,6 +7,11 @@ import {
   faChartLine
 } from "@fortawesome/free-solid-svg-icons";
 
+import HomePage from "./pages/Home";
+import CalculatorPage from "./pages/Calculator";
+import ForestPage from "./pages/Forest";
+import StatisticsPage from "./pages/Statistics";
+
 function App() {
   return (
     <BrowserRouter>
@@ -41,38 +46,6 @@ function App() {
         <Route path="/Statistics" element={<StatisticsPage />} />
       </Routes>
     </BrowserRouter>
-  );
-}
-
-function HomePage() {
-  return (
-    <>
-      <h1>Home page</h1>
-    </>
-  );
-}
-
-function ForestPage() {
-  return (
-    <>
-      <h1>Forest</h1>
-    </>
-  );
-}
-
-function StatisticsPage() {
-  return (
-    <>
-      <h1>Statistics</h1>
-    </>
-  );
-}
-
-function CalculatorPage() {
-  return (
-    <>
-      <h1>Calculator</h1>
-    </>
   );
 }
 

@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { Workbox } from 'workbox-window';
 
 if ('serviceWorker' in navigator) {
-  const wb = new Workbox('./sw.js');
+  const wb = new Workbox('./service-worker.js');
   wb.register();
 }
 
