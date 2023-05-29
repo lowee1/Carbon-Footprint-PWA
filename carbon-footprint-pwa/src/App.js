@@ -1,4 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faCalculator,
+  faTree,
+} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
@@ -6,20 +12,26 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <FontAwesomeIcon icon={faHome} />
+            </Link>
           </li>
           <li>
-            <Link to="/Forest">Forest</Link>
+            <Link to="/Calculator">
+              <FontAwesomeIcon icon={faCalculator} />
+            </Link>
           </li>
           <li>
-            <Link to="/Statistics">Statistics</Link>
+            <Link to="/Forest">
+              <FontAwesomeIcon icon={faTree} />
+            </Link>
           </li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Calculator" element={<CalculatorPage />} />
         <Route path="/Forest" element={<ForestPage />} />
-        <Route path="/Statistics" element={<StatisticsPage />} />
       </Routes>
     </BrowserRouter>
   );
@@ -29,8 +41,6 @@ function HomePage() {
   return (
     <>
       <h1>Home page</h1>
-      <Link to="/Forest">Forest</Link>
-      <Link to="/Statistics">Statistics</Link>
     </>
   );
 }
@@ -39,8 +49,6 @@ function ForestPage() {
   return (
     <>
       <h1>Forest</h1>
-      <Link to="/">Home page</Link>
-      <Link to="/Statistics">Statistics</Link>
     </>
   );
 }
@@ -49,8 +57,14 @@ function StatisticsPage() {
   return (
     <>
       <h1>Statistics</h1>
-      <Link to="/">Home page</Link>
-      <Link to="/Forest">Forest</Link>
+    </>
+  );
+}
+
+function CalculatorPage() {
+  return (
+    <>
+      <h1>Calculator</h1>
     </>
   );
 }
