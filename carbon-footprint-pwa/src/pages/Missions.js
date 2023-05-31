@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Missions() {
+function MissionsPage() {
   return (
-    <div style={{ border: '1px solid black', padding: '16px' }}>
+    <div>
       <h2>Missions</h2>
       <ul>
         <li>Mission 1</li>
@@ -13,4 +13,4 @@ function Missions() {
   );
 }
 
-export default Missions;
+export default MissionsPage;
