@@ -1,6 +1,11 @@
 .widget-box {
-    margin-left: 10px;
-    margin-right: 10px; 
+    margin: 10px;
     border-radius: 10px;
     padding: 10px;
+}
+
+#carbon-butler-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

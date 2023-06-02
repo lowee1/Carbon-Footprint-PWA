@@ -8,6 +8,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./theme";
 
+import "./index.css";
+
 if ("serviceWorker" in navigator) {
   const wb = new Workbox("./service-worker.js");
   wb.register();
