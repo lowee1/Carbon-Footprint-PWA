@@ -9,6 +9,7 @@ import {
   Button,
   Box,
   IconButton,
+  Avatar,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Missions from "./Missions";
@@ -55,7 +56,8 @@ function HomePage() {
             <Grid container spacing={2} flexDirection="column">
               <Grid xs={12} container alignItems="center" justifyContent="center">
                 <Box display="flex" alignItems="center">
-                  <h2 style={{ marginRight: "10px" }}>Hello {userName}</h2>
+                  <Avatar alt="Profile Picture" src="https://i.pravatar.cc/150?img=7" style={{ margin: "10px" , height: "6rem", width: "4rem"}} />
+                  <h2 style={{ marginRight: "10px", fontSize: "2rem" }}>Hello {userName}</h2>
                   <IconButton onClick={() => setOpen(true)}>
                     <EditIcon />
                   </IconButton>
@@ -74,7 +76,7 @@ function HomePage() {
         <Grid container spacing={2}>
           <Grid xs={12}>
             <Paper className="widget-box">
-              <Box style={{ height: "200px" }}>
+              <Box>
                 {/* Add content for the widget box here */}
                 <Missions />
               </Box>
