@@ -4,12 +4,14 @@ import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import ForestIcon from "@mui/icons-material/Forest";
 import HomeIcon from "@mui/icons-material/Home";
 import CalculateIcon from "@mui/icons-material/Calculate";
+import Group from "@mui/icons-material/Group";
 
 import HomePage from "./pages/Home";
 import CalculatorPage from "./pages/Calculator";
 import ForestPage from "./pages/Forest";
 import StatisticsPage from "./pages/Statistics";
 import MissionsPage from "./pages/Missions";
+import FriendsPage from "./pages/Friends";
 
 import "./App.css";
 
@@ -28,6 +30,7 @@ function App() {
         <Route path="/forest" element={<ForestPage />} />
         <Route path="/statistics" element={<StatisticsPage />} />
         <Route path="/missions" element={<MissionsPage />} />
+        <Route path="/friends" element={<FriendsPage />} />
       </Routes>
       <BottomNavigation value={value} onChange={handleChange} className="bottom-nav">
         <BottomNavigationAction
@@ -48,6 +51,11 @@ function App() {
           component={Link}
           to="/forest"
         />
+        <BottomNavigationAction
+          label="Friends"
+          icon={<Group />}
+          component={Link}
+          to="/friends" />
       </BottomNavigation>
     </BrowserRouter>
   );
